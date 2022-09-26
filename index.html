@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1 id="location">Moscow</h1>
-        <div class="temp">Current temperature: <span id="temp">18</span></div>
+        <div class="temp">Current temperature: <span id="temp">18</span></div><br>
         <div class="min-temp">Min temperature: <span id="min-temp">16</span></div>
         <div class="max-temp">Max temperature: <span id="max-temp">24</span></div>
         <div class="weather-descr">Weather description: <span id="weather-descr">Bloody</span></div>
@@ -20,7 +20,7 @@
         <div class="humidity">Humidity: <span id="humidity">89</span></div>
         <div class="pressure">Pressure: <span id="pressure">1011</span></div>
     </div>
-    <form action="" id="getWeather">
+    <form action="" id="getWeather" autocomplete="off">
         <input type="text" id="place" name="place" required placeholder="City">
         <fieldset>
             <legend>Units:</legend>
@@ -34,7 +34,8 @@
               <label for="louie">Imperial</label>
             </div>
         </fieldset>
-        <input type="submit">
+        <input type="submit"> <div id="preloader"></div>
     </form>
+    
 </body>
 </html>

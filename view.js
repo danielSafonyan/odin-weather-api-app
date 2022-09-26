@@ -16,6 +16,7 @@ class View {
         this.sunset = document.querySelector('#sunset');
         this.humidity = document.querySelector('#humidity');
         this.pressure = document.querySelector('#pressure');
+        this.placeInput = document.querySelector('#place');
     }
     updateWeather(weatherObject) {
         this.location.innerText = weatherObject.name;
@@ -31,4 +32,6 @@ class View {
 }
 
 const view = new View();
+
+console.log(view.placeInput);
 export default view;
