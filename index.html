@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div id="location">Moscow</div>
+        <h1 id="location">Moscow</h1>
         <div class="temp">Current temperature: <span id="temp">18</span></div>
         <div class="min-temp">Min temperature: <span id="min-temp">16</span></div>
         <div class="max-temp">Max temperature: <span id="max-temp">24</span></div>
@@ -20,5 +20,21 @@
         <div class="humidity">Humidity: <span id="humidity">89</span></div>
         <div class="pressure">Pressure: <span id="pressure">1011</span></div>
     </div>
+    <form action="" id="getWeather">
+        <input type="text" id="place" name="place" required placeholder="City">
+        <fieldset>
+            <legend>Units:</legend>
+            <div>
+              <input type="radio" id="metric" name="unit" value="metric"
+                     checked>
+              <label for="huey">Metric</label>
+            </div>
+            <div>
+              <input type="radio" id="imperial" name="unit" value="imperial">
+              <label for="louie">Imperial</label>
+            </div>
+        </fieldset>
+        <input type="submit">
+    </form>
 </body>
 </html>

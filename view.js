@@ -1,5 +1,4 @@
 function getLocalTime(epochTime, offset) {
-    console.log(offset);
     const date = new Date((epochTime + offset) * 1000);
     const hours = date.getHours();
     const minutes = date.getMinutes();

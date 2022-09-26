@@ -1,16 +1,26 @@
 import view from './view.js';
 
 const apiKey = 'cbe4068c303885baf947474faa0052c1';
-let city = 'Moscow'
-let units = 'metric';
-let gif = '';
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cbe4068c303885baf947474faa0052c1&units=${units}`
 
-async function getWeather() {
-    const response = await fetch(url, {'mode': 'cors'});
-    const responseData = await response.json();
-    console.log(responseData);
-    view.updateWeather(responseData);
+async function getWeather(place, units) {
+    try {
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apiKey}&units=${units}`
+        const response = await fetch(url, {'mode': 'cors'});
+        const responseData = await response.json();
+        view.updateWeather(responseData);
+    } catch(err) {
+        console.log(err);
+        view.location.innerText = "Not a Valid Location";
+    }
 }
 
-getWeather();
+getWeather('Moscow', 'Metric');
+
+const form = document.querySelector('#getWeather');
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const place = formData.get('place');
+    const units = formData.get('unit');
+    getWeather(place, units);
+})
