@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather API App</title>
     <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    <script type="module" src="./script.js" defer></script>
 </head>
 <body>
-    Hello, World!
+    <div class="container">
+        <div id="location">Moscow</div>
+        <div class="temp">Current temperature: <span id="temp">18</span></div>
+        <div class="min-temp">Min temperature: <span id="min-temp">16</span></div>
+        <div class="max-temp">Max temperature: <span id="max-temp">24</span></div>
+        <div class="weather-descr">Weather description: <span id="weather-descr">Bloody</span></div>
+        <div class="sunrise">Sunrise: <span id="sunrise">5:30</span></div>
+        <div class="sunset">Sunset: <span id="sunset">18:30</span></div>
+        <div class="humidity">Humidity: <span id="humidity">89</span></div>
+        <div class="pressure">Pressure: <span id="pressure">1011</span></div>
+    </div>
 </body>
 </html>
